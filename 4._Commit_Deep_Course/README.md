@@ -75,7 +75,7 @@
 ## Git Log
 git log는 주어진 저장소에 대한 커밋 정보들을 제공합니다.
 
-### git log --online 
+### git log --oneline 
 => 각 커밋 메시지를 한 줄로 나타내어 보여준다. 
 
 커밋 메시지의 양이 많을 때는 첫 번째 라인은 커밋을 요약한 것이여야 한다. 
@@ -109,4 +109,3 @@ using a .gitignore file. This is useful for files you know you NEVER want to com
 - Operating System files (.DS_Store on Mac)
 - Log files
 - Dependencies & packages
-
