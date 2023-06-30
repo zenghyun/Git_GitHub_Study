@@ -70,5 +70,44 @@
 
 반드시 관심을 가져야 합니다.
 
+<br>
 
+## Git Log
+git log는 주어진 저장소에 대한 커밋 정보들을 제공합니다.
+
+### git log --online 
+=> 각 커밋 메시지를 한 줄로 나타내어 보여준다. 
+
+커밋 메시지의 양이 많을 때는 첫 번째 라인은 커밋을 요약한 것이여야 한다. 
+
+<br>
+
+## commit 수정 
+깃으로 작업할 때, 새 커밋을 실행한 다음 그 커밋에 관련 파일을 포함시키는 것을 잊었거나, 커밋 메시지를 읽었을 때 오타가 있는 것을 늦게 깨달을 때가 있다. 
+
+이를 해결하는 방법에 대해 알아보자. 
+
+### 1. git commit --amend 
+기존의 커밋을 수정할 수 있으나, 바로 직전의 커밋만 가능하다.
+
+사용하는 경우 
+1. 커밋에 파일 추가, 삭제 할 때
+
+2. 커밋 메시지를 변경할 때 
+ 
+```
+git commit -m 'some commit'
+git add forgotten_file
+git commit --amend 
+```
+
+<br>
+
+## .gitignore 
+We can tell Git which files and directories to ignore in a given repository,
+using a .gitignore file. This is useful for files you know you NEVER want to commit, including: 
+- Secrets, API keys, credentials, etc.
+- Operating System files (.DS_Store on Mac)
+- Log files
+- Dependencies & packages
 
