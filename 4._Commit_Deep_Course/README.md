@@ -100,7 +100,6 @@ git commit -m 'some commit'
 git add forgotten_file
 git commit --amend 
 ```
-
 <br>
 
 ## .gitignore 
