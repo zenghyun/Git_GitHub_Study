@@ -29,7 +29,7 @@ git diff HEAD
 git diff HEAD를 실행하면, HEAD가 가리키는 최신 커밋과 워킹 디렉토리 간의 차이를 보여줍니다.
 
 <br>
-
+    
 ## Git Diff --Staged  or --cached 
 두 옵션 모두 스테이지에 등록된 변경사항만을 보여줍니다. 
 
