@@ -15,7 +15,7 @@
 git branch -r 
 // ex origin/master
 ```
-Run git branch -r to view the remote branches our local repository knows about.
+git branch -r을 실행하여 로컬 리포지토리가 알고 있는 원격 분기를 봅니다.
 
 ```
 git checkout origin/main 
@@ -42,9 +42,9 @@ git branch
 보려면 어떻게 해야할까? 
 
 ### It's super easy! 
-Run git switch <"remote-branch-name"> to create a new local branch from the remote branch of the same name. 
+git switch <"remote-branch-name">을 실행하여 동일한 이름의 원격 분기에서 새 로컬 분기를 만듭니다.
 
-git switch puppies makes me a local puppies branch AND sets it up to track the remote branch origin/puppies. 
+git switch puppies는 나를 로컬 puppies 브랜치로 만들고 원격 브랜치 오리진/강아지를 추적하도록 설정합니다.
 
 ```
 git switch puppies
