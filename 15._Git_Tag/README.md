@@ -90,3 +90,14 @@ git add
 git commit - m
 git tag <tagname>
 ```
+
+## Annotated Tags
+git tag -a를 사용하여 주석이 달린 새 태그를 만듭니다. 그러면 Git이 기본 텍스트 편집기를 열고 추가 정보를 묻는 메시지를 표시합니다.
+
+git commit과 유사하게 -m 옵션을 사용하여 메시지를 직접 전달하고 텍스트 편집기를 열지 않아도 됩니다.
+
+주석 태그도 일반 태그처럼 헤드가 현재 가리키는 커밋을 가리킵니다. 
+
+```
+git tag -a <tagname>
+```
