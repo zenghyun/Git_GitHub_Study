@@ -99,7 +99,7 @@ git commit과 유사하게 -m 옵션을 사용하여 메시지를 직접 전달�
 주석 태그도 일반 태그처럼 헤드가 현재 가리키는 커밋을 가리킵니다. 
 
 ```
-git tag -a <tagname>
+git tag -a <tagname> -m "message"
 ```
 
 
