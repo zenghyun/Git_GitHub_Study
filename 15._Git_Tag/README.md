@@ -101,3 +101,8 @@ git commit과 유사하게 -m 옵션을 사용하여 메시지를 직접 전달�
 ```
 git tag -a <tagname>
 ```
+
+
+```
+git show <tagname>
+```
