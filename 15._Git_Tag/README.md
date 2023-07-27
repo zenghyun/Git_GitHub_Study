@@ -86,5 +86,7 @@ git diff <tag1> <tag2>
 Lightweight Tags 를 생성하려면 git tag <tagname>을 사용하십시오. 기본적으로 Git은 HEAD가 참조하는 커밋을 참조하는 태그를 생성합니다.
 
 ```
+git add 
+git commit - m
 git tag <tagname>
 ```
