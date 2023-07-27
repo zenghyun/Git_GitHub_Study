@@ -13,7 +13,7 @@ lightweight tags는... lightweight 입니다. 특정 커밋을 가리키는 이�
 주석이 달린 태그는 작성자의 이름과 이메일, 날짜, 태깅 메시지(예: 커밋 메시지)를 포함한 추가 메타 데이터를 저장합니다.
 
 
-## Semantic Versionging 
+## Semantic Versioning 
 시맨틱 버전 지정 사양은 소프트웨어 릴리스를 위한 표준화된 버전 지정 시스템을 설명합니다. 개발자가 소프트웨어 릴리스에 의미를 부여할 수 있는 일관된 방법을 제공합니다(이 릴리스는 얼마나 큰 변화입니까?).
 
 버전은 마침표로 구분된 세 개의 숫자로 구성됩니다.
@@ -68,7 +68,7 @@ git tag -l "v17*" => v17로 시작하는 모든 tag를 검색
 git tag -l을 사용한 다음 와일드카드 패턴을 전달하여 특정 패턴과 일치하는 태그를 검색할 수 있습니다. 예를 들어 git tag -l "*beta*"는 이름에 "beta"가 포함된 태그 목록을 출력합니다.
 
 ## Checking Out Tags 
-특정 태그에서 저장소의 상태를 보려면 git checkout <tag>를 사용할 수 있습니다. 이것은 우리를 분리된 HEAD에 넣습니다!
+특정 태그에서 저장소의 상태를 보려면 git checkout <'tag'>를 사용할 수 있습니다. 이것은 우리를 분리된 HEAD에 넣습니다!
 
 ```
 git checkout <tag>
@@ -83,7 +83,7 @@ git diff <tag1> <tag2>
 두 tag 사이의 변경사항을 확인할 수 있다. 
 
 ## Creating Lightweight Tags 
-Lightweight Tags 를 생성하려면 git tag <tagname>을 사용하십시오. 기본적으로 Git은 HEAD가 참조하는 커밋을 참조하는 태그를 생성합니다.
+Lightweight Tags 를 생성하려면 git tag <'tagname'>을 사용하십시오. 기본적으로 Git은 HEAD가 참조하는 커밋을 참조하는 태그를 생성합니다.
 
 ```
 git add 
@@ -102,7 +102,39 @@ git commit과 유사하게 -m 옵션을 사용하여 메시지를 직접 전달�
 git tag -a <tagname> -m "message"
 ```
 
+### tag 보기 
 
 ```
 git show <tagname>
+```
+## Tagging Previous Commits 
+지금까지 HEAD가 참조하는 커밋에 태그를 지정하는 방법을 살펴보았습니다. 커밋 해시를 제공하여 이전 커밋에 태그를 지정할 수도 있습니다. git tag -a <'tagname'> <'commit-hash'>
+
+
+```
+git tag <tagname> <commit>
+```
+
+## Force로 tag 교체하기 
+tag 값은 고유 값이여야 합니다. 재사용 할 수 없습니다. 
+
+```
+git tag <tagname> Hash -f 
+```
+
+위의 명령어를 사용하면 기존의 tag를 다른 곳으로 교체할 수 있습니다. 
+
+## Deleting Tags 
+태그를 삭제하려면 git tag -d <'tagname'>을 사용하십시오.
+
+```
+git tag -d <tagname>
+```
+
+## Pushing Tags 
+기본적으로 git push 명령은 태그를 원격 서버로 전송하지 않습니다.
+한 번에 푸시하고 싶은 태그가 많은 경우 git push 명령에 --tags 옵션을 사용할 수 있습니다. 이렇게 하면 아직 존재하지 않는 원격 서버로 모든 태그가 전송됩니다.
+
+```
+git push --tags
 ```
